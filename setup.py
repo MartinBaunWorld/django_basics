@@ -6,9 +6,12 @@ setup(
     description=(
         'Django functionality that I always end up needing',
     ),
-    long_description='',
+    long_description=(
+        'Django functionality that I always end up needing',
+    ),
     author='Martin',
     author_email='m@pinehq.com',
+    license='MIT',
     packages=[
         'django_basics',
     ],
