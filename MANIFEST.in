@@ -2,3 +2,4 @@ include LICENSE
 include MANIFEST.in
 include requirements.txt
 recursive-include django_basics/migrations *
+recursive-include django_basics/templates *
