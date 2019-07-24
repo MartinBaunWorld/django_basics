@@ -13,7 +13,7 @@ setup(
         'django_basics',
     ],
     install_requires=[
-        'django==2.1.7',
+        'django=<2.2',
         'django-ipware==2.1.0',
     ],
     scripts=[]
