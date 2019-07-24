@@ -14,6 +14,7 @@ setup(
     license='MIT',
     packages=[
         'django_basics',
+        'django_basics.migrations',
     ],
     install_requires=[
         'django>=2',
