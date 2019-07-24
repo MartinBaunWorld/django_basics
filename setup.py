@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django_basics',
-    version='0.1.0',
+    version='0.1.1',
     description=(
         'Django functionality that I always end up needing',
     ),
@@ -16,5 +16,6 @@ setup(
         'django>=2',
         'django-ipware>=2',
     ],
+    include_package_data=True,
     scripts=[]
 )
