@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.utils.translation import ugettext_lazy as _
 
 
 class CoreModel(models.Model):
@@ -29,9 +30,15 @@ class CoreModel(models.Model):
 
 
 class SEO(CoreModel):
+    path = models.CharField(
+        max_length=128,
+        help_text=(
+            'URL of place to override seo elements. E.g. /something/here'
+        )
+    )
     title = models.CharField(
-        max_length=256,
-        blank=True
+        blank=True,
+        max_length=120,
     )
     html_title = models.CharField(
         blank=True,
@@ -44,7 +51,17 @@ class SEO(CoreModel):
     meta_keywords = models.TextField(
         blank=True,
     )
-    path = models.CharField(max_length=128)
+
+    site = models.ForeignKey(
+        'sites.Site',
+        null=True,
+        on_delete=models.CASCADE,
+    )
 
     def __str__(self, ):
         return self.title
+
+    class Meta:
+        unique_together = ['path', 'site']
+        verbose_name = _('SEO')
+        verbose_name_plural = _('SEOs')
