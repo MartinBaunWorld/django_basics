@@ -36,10 +36,6 @@ class SEO(CoreModel):
             'URL of place to override seo elements. E.g. /something/here'
         )
     )
-    title = models.CharField(
-        blank=True,
-        max_length=120,
-    )
     html_title = models.CharField(
         blank=True,
         max_length=120,

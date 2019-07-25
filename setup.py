@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django_basics',
-    version='0.1.6',
+    version='0.1.7',
     description=(
         'Django functionality that I always end up needing'
     ),
