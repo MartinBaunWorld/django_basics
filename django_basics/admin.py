@@ -3,7 +3,7 @@ from .models import SEO
 
 
 class SEOAdmin(admin.ModelAdmin):
-    list_display = ('path', 'title', 'html_title', 'site')
+    list_display = ('path', 'html_title', 'site')
 
 
 admin.site.register(SEO, SEOAdmin)
