@@ -55,7 +55,7 @@ class SEO(CoreModel):
     )
 
     def __str__(self, ):
-        return self.title
+        return self.html_title
 
     class Meta:
         unique_together = ['path', 'site']
