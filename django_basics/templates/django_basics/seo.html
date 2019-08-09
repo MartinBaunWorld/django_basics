@@ -11,3 +11,7 @@
 {% if seo.meta_keywords %}
 <meta name="keywords" content="{{ seo.meta_keywords }}" >
 {% endif %}
+
+{% if seo.link_rel and seo.link_href %}
+<link rel="{{ seo.link_rel }}" href="{{ seo.link_href }}" />
+{% endif %}

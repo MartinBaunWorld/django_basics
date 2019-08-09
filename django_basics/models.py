@@ -47,7 +47,14 @@ class SEO(CoreModel):
     meta_keywords = models.TextField(
         blank=True,
     )
-
+    link_rel = models.CharField(
+        blank=True,
+        max_length=256,
+    )
+    link_href = models.CharField(
+        blank=True,
+        max_length=256,
+    )
     site = models.ForeignKey(
         'sites.Site',
         null=True,
